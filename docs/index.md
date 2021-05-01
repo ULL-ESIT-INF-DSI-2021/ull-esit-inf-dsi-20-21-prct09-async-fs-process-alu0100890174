@@ -50,11 +50,7 @@ La ejecución si ignoramos las llamadas propias de los módulos de cada función
    | access | -- | -- | -- |
    | main | -- | -- | -- |
 
-3. El programa se resuelve saliendo ```access()``` y ```main()``` de la ```pila de llamadas``` en ese orden. El callback de ```access()``` es recogido dentro de la ```API```.
-
-   | Call Stack | Web API | Node.js Queue | Terminal |
-   | -- | -- | -- | -- |
-   | main | access | -- | -- |
+3. El programa se resuelve saliendo ```access()``` de la ```pila de llamadas```5. El callback de ```access()``` es recogido dentro de la ```API```.
 
    | Call Stack | Web API | Node.js Queue | Terminal |
    | -- | -- | -- | -- |
