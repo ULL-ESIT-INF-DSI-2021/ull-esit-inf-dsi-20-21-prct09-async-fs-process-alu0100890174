@@ -1,0 +1,46 @@
+{
+  "name": "ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0100890174",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "doc": "typedoc",
+    "coverage": "nyc npm test && nyc report --reporter=lcov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0100890174.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0100890174/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0100890174#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.16",
+    "@types/chalk": "^2.2.0",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "chai": "^4.3.4",
+    "chalk": "^4.1.1",
+    "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.1.1",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/yargs": "^16.0.1",
+    "save-dev": "^0.0.1-security",
+    "typedoc": "^0.20.36",
+    "yargs": "^16.2.0"
+  }
+}
