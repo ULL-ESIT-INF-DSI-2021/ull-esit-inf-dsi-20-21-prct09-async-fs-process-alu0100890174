@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "tsc-watch --onSuccess \"node dist/ejercicio-1/ejercicio-1.js src/ejercicio-1/helloworld.csv\"",
+    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "doc": "typedoc",
     "coverage": "nyc npm test && nyc report --reporter=lcov"
   },

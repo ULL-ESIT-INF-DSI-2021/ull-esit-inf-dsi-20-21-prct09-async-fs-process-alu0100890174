@@ -1,0 +1,4 @@
+
+Eduardo,Segredo,Gonzalez
+Alejandro,Marrero,Díaz
+Luis,García,Fortez
