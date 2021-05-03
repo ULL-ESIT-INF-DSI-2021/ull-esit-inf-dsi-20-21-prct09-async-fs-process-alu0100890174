@@ -1,6 +1,14 @@
 {
     "entryPoints": [
-    "./src/index.ts"
+    "./src/ejercicio-1/ejercicio-1.ts",
+    "./src/ejercicio-2/ejercicio-2.ts",
+    "./src/ejercicio-2/FileAnalize.ts",
+    "./src/ejercicio-2/FileAnalizePipe.ts",
+    "./src/ejercicio-3/ejercicio-3.ts",
+    "./src/ejercicio-3/Note.ts",
+    "./src/ejercicio-3/ProcessNote.ts",
+    "./src/ejercicio-3/noteApp.ts",
+    "./src/ejercicio-3/watcher.ts"
     ],
     "out": "./docs/typedoc"
 }
