@@ -1,0 +1,13 @@
+title: Informes - DSI
+email: alu0100890174@ull.edu.es
+Description: >- 
+        Página diseñada para desarrollar informes para las prácticas de Desarrollo de Sistemas Informáticos -
+        Grado en Ingeniería Informática - ULL
+baseurl: "/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0100890174"
+url: "https://ull-esit-inf-dsi-2021.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  educande05
+
+#build settings
+theme: jekyll-theme-slate
+plugins:
+  - jekyll-feed
