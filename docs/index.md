@@ -1,4 +1,19 @@
-### Ejercicios:
+# Práctica 9 - Sistema de ficheros y creación de procesos en Node.js
+
+## 1. Introducción:
+
+En este informe trataremos una serie de ejercicios orientados al uso de las APIs proporcionadas por Node.js para interactuar con el sistema de ficheros, así como para crear procesos.
+
+El próposito general de la misma es comprender el funcionamientos de la API de Callbacks y su API asincrona para la creación de procesos en `Node.js`, este es un entorno de de ejecución javascript que trabaja de forma asíncrona, trabajaremos también con  que bloquea el bucle de eventos hasta que terminan todas las operaciones, además seguiremos usando algunos módulos de desarrollo como: `yargs` o `chalk`.
+
+Tambíen seguiremos avanzando en el desarrollo de cubrimiento, testing y seguridad del código usando `Github Actions`, `Coveralls` y `Sonar Cloud`. Seguimos utilizando documentación generada por `Typedoc` y comprobando el correcto funcionamiento por medio de las metodologías de desarrollo TDD usando `Mocha`y `Chai`.
+
+## 2. Objetivos:
+
+1. Familiarícese con el [API de callbacks proporcionada por Node.js para interactuar con el sistema de ficheros](https://nodejs.org/dist/latest/docs/api/fs.html#fs_callback_api).
+2. Familiarícese con el [API asíncrona proporcionada por Node.js para crear procesos y, en concreto, con la función spawn](https://nodejs.org/dist/latest/docs/api/child_process.html#child_process_asynchronous_process_creation).
+
+## 3. Desarrollo:
 
 #### Ejercicio 1 
 
@@ -700,3 +715,9 @@ The note has been modify successfuly
 ```
 
 (Debido a la forma en la que trabaja la función fs.writeFileSync para crear un archivo y escribirlo, vemos como el Watcher detecta varios cambios en la ejecución de un solo comando en noteApp).
+
+## 4. Concluciones
+
+El manejo de de ```La Pila de Llamadas```, ```La API de Node.js```, ```La Cola de Manejadores``` y la ```Terminal``` de forma correcta es una tarea muy compleja si no tienes cuidado y experiencia a la hora de trabajar con funciones asincronas y puedes tener problemas si no lo haces de la forma adecuada, que es justamente el principal problema que he tenido en la elaboración de esta práctica 9, de hecho no creo haber hecho muchas cosas de forma correcta puesto que en ocaciones me he visto perdido en el código al obtener por pantalla alto totalmente inesperado a lo que que esperaba, ha sido un rompe cabezas y aún faltan bastantes piezas, resolviendo problemas así me doy cuenta de lo compleja y potente que es la API de Node.js.
+
+Los tests utilizando Github Actions no son funcionales en el estado actual debido a que la función Watcher cuando es ejecutada requiere de cambios en tiempo real por un usuario en la base de datos, adicionalmente debido a los Tests, sin una condición de parada permanecen ejecutandose continuamente.
