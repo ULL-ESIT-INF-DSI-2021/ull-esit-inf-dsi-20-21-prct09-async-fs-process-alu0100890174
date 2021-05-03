@@ -498,6 +498,10 @@ A partir de la práctica desarrollada anteriormente (Práctica 8), se nos pide i
 
 No tenemos que modificar en absoluto dicha previa práctica, debemos pasar por parametros a la consola del programa el usuario y la ruta de su directorio de notas, con esta información nuestro programa será capaz de permanecer a la escucha de una modificación dentro del repositorio de notas.
 
+```fs.watch``` cuando detecta un cambio en el fichero o directorio observado este objeto emite un evento, este evento puede ser:
+   * **Modify** Se emite cuando detecta una modificación de un objeto ya existente.
+   * **Rename** Este evento se lanza cuando se detecta que se ha sobreescrito la ruta interna de un directorio, creando o borrando un archivo en su interior.
+
 ##### Implementación
 
 Para implementar el ejercicio he implementado una ```clase watcher``` que implementa la funcionalidad principal del ejercicio y un ```menú yargs``` que permite al usuario inicializar el programa y pasarle los parámetros a watcher.
@@ -715,6 +719,21 @@ The note has been modify successfuly
 ```
 
 (Debido a la forma en la que trabaja la función fs.writeFileSync para crear un archivo y escribirlo, vemos como el Watcher detecta varios cambios en la ejecución de un solo comando en noteApp).
+
+#### Preguntas
+
+El ejercicio reune una serie de preguntas:
+
+1. ¿Cómo haría para mostrar, no solo el nombre, sino también el contenido del fichero, en el caso de que haya sido creado o modificado?
+   * Podemos hacerlo de un par de formas diferentes:
+      1. Podemos utilizar el objeto spawn junto al comando cat y redirigir su proceso stream ```stdout``` a la terminal.
+      2. Realizar un readfile, pasar el buffer a formato string y mostrarlo por consola.
+      3. Crear un objeto ReadStream, dirigimos la entrada del objeto al archivo y dirigir su salida a la pantalla a través de su objeto heredado de childprocess "on" y el buffer que genera.
+
+2. ¿Cómo haría para que no solo se observase el directorio de un único usuario sino todos los directorios correspondientes a los diferentes usuarios de la aplicación de notas?
+   * ```fs.watch``` permite que le indiquemos opciones para alterar su comportamiento, en concreto existe un flag ```recursive``` que le indica al objeto que debe monitorizar todos los subdirectorios del directorio que le especifiquemos, de forma que:
+      1. Indicarle el flag ```recursive```.
+      2. Pasarle la ruta del directorio que contiene todas las notas.
 
 ## 4. Concluciones
 
